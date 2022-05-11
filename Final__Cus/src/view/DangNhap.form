@@ -302,12 +302,12 @@
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Thinh Ly\Desktop\Pic_Icon_Java\aa.jpg"/>
+                  <Image iconType="3" name="/view/DangNhap.jpg"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="500" height="740"/>
+                  <AbsoluteConstraints x="0" y="-10" width="500" height="740"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -559,7 +559,7 @@
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Thinh Ly\Desktop\Pic_Icon_Java\66fa983274830a826f6d88768dc403f4.jpg"/>
+                  <Image iconType="3" name="/view/quenmk-dk.jpg"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -792,7 +792,7 @@
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Thinh Ly\Desktop\Pic_Icon_Java\66fa983274830a826f6d88768dc403f4.jpg"/>
+                  <Image iconType="3" name="/view/quenmk-dk.jpg"/>
                 </Property>
               </Properties>
               <Constraints>

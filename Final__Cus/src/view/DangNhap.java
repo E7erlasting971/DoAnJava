@@ -211,8 +211,8 @@ public class DangNhap extends javax.swing.JFrame {
         });
         jpnlManHinhDangNhap.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 330, 20, 20));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\Thinh Ly\\Desktop\\Pic_Icon_Java\\aa.jpg")); // NOI18N
-        jpnlManHinhDangNhap.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 740));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/DangNhap.jpg"))); // NOI18N
+        jpnlManHinhDangNhap.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 500, 740));
 
         jLabel15.setFont(new java.awt.Font("Ravie", 1, 20)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(7, 200, 105));
@@ -292,7 +292,7 @@ public class DangNhap extends javax.swing.JFrame {
         jLabel22.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(97, 200, 13)));
         jpnlQuenMatKhau.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 60, 320));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Thinh Ly\\Desktop\\Pic_Icon_Java\\66fa983274830a826f6d88768dc403f4.jpg")); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/quenmk-dk.jpg"))); // NOI18N
         jpnlQuenMatKhau.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 430, 530));
 
         jPanel3.add(jpnlQuenMatKhau, "card4");
@@ -359,7 +359,7 @@ public class DangNhap extends javax.swing.JFrame {
         jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(97, 200, 13)));
         jpnlManHinhDangKy.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 290, 50));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\Thinh Ly\\Desktop\\Pic_Icon_Java\\66fa983274830a826f6d88768dc403f4.jpg")); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/quenmk-dk.jpg"))); // NOI18N
         jpnlManHinhDangKy.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 430, 530));
 
         jPanel3.add(jpnlManHinhDangKy, "card4");

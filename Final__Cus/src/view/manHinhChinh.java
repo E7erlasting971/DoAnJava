@@ -565,7 +565,7 @@ public class manHinhChinh extends javax.swing.JFrame {
 
         jtxtSDT_NV.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
 
-        jbtn_NV.setBackground(new java.awt.Color(7, 200, 105));
+        jbtn_NV.setBackground(new java.awt.Color(153, 153, 255));
         jbtn_NV.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtn_NV.setText("Thêm");
         jbtn_NV.addActionListener(new java.awt.event.ActionListener() {
@@ -574,7 +574,7 @@ public class manHinhChinh extends javax.swing.JFrame {
             }
         });
 
-        jbtnSua_NhanVien.setBackground(new java.awt.Color(7, 200, 105));
+        jbtnSua_NhanVien.setBackground(new java.awt.Color(153, 153, 255));
         jbtnSua_NhanVien.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnSua_NhanVien.setText("Sửa");
         jbtnSua_NhanVien.addActionListener(new java.awt.event.ActionListener() {
@@ -583,7 +583,7 @@ public class manHinhChinh extends javax.swing.JFrame {
             }
         });
 
-        jbtnXoa_NhanVien.setBackground(new java.awt.Color(7, 200, 105));
+        jbtnXoa_NhanVien.setBackground(new java.awt.Color(153, 153, 255));
         jbtnXoa_NhanVien.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnXoa_NhanVien.setText("Xóa");
         jbtnXoa_NhanVien.addActionListener(new java.awt.event.ActionListener() {
@@ -714,7 +714,7 @@ public class manHinhChinh extends javax.swing.JFrame {
                         .addGap(109, 109, 109))))
         );
 
-        jButton3.setBackground(new java.awt.Color(169, 73, 238));
+        jButton3.setBackground(new java.awt.Color(7, 200, 105));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jButton3.setText("Danh Sách Nhân Viên");
 
@@ -1679,7 +1679,7 @@ public class manHinhChinh extends javax.swing.JFrame {
         jLabel50.setText("Khách Hàng");
         jLabel50.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
 
-        jButton8.setBackground(new java.awt.Color(245, 193, 32));
+        jButton8.setBackground(new java.awt.Color(7, 200, 105));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jButton8.setText("Danh Sách Khách Hàng");
 
@@ -2123,6 +2123,7 @@ public class manHinhChinh extends javax.swing.JFrame {
         jbnThang.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jbnThang.setForeground(new java.awt.Color(255, 255, 255));
         jbnThang.setText("Thống kê theo tháng");
+        jbnThang.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
         jbnThang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbnThangActionPerformed(evt);
@@ -2203,6 +2204,7 @@ public class manHinhChinh extends javax.swing.JFrame {
         jpnlKhachHang.setVisible(false);
         jpnlThongKe.setVisible(false);
         jbtnTimKiemKhachHang_frmThanhToan.setVisible(true);
+        jpnlThongTinBanHang.setVisible(false);
     }//GEN-LAST:event_btnManHinhChinhActionPerformed
 
     private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
