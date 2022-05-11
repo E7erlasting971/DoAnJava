@@ -24,10 +24,11 @@ import model.TaiKhoanDTO;
  * @author truongthanh
  */
 public class DangNhap extends javax.swing.JFrame {
+
     TaiKhoanDAO tkDAO = new TaiKhoanDAO();
-     private ArrayList<TaiKhoanDTO> list_TK;
+    private ArrayList<TaiKhoanDTO> list_TK;
     // DefaultTableModel model_TaiKhoan;
-      private Connection conn ;
+    private Connection conn;
 
     /**
      * Creates new form DangNhap
@@ -37,6 +38,7 @@ public class DangNhap extends javax.swing.JFrame {
         //jPanel3.setBackground(new Color (0,0,0,0)); 
         //jTextField1.setBackground(new Color (20,0,0,0));
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,6 +76,9 @@ public class DangNhap extends javax.swing.JFrame {
         jbtnTimKiem_QuenMatKhau = new javax.swing.JButton();
         jbtnTroVeCuaQuenMatKhau = new javax.swing.JButton();
         jbtnKichHoat_QuenMatKhau = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         jpnlManHinhDangKy = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -85,6 +90,9 @@ public class DangNhap extends javax.swing.JFrame {
         jtxtCauHoiBaoMat = new javax.swing.JTextField();
         jtxtTraLoiCauHoi = new javax.swing.JTextField();
         jtxtTaoMatKhau_FrmDangKy = new javax.swing.JPasswordField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
 
         jLabel5.setText("jLabel5");
 
@@ -213,44 +221,36 @@ public class DangNhap extends javax.swing.JFrame {
 
         jPanel3.add(jpnlManHinhDangNhap, "card3");
 
-        jpnlQuenMatKhau.setBackground(new java.awt.Color(0, 0, 0));
+        jpnlQuenMatKhau.setBackground(new java.awt.Color(255, 255, 255));
         jpnlQuenMatKhau.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel8.setText("Tên Đăng Nhập");
-        jpnlQuenMatKhau.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 110, -1));
+        jpnlQuenMatKhau.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 110, -1));
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setText("Câu Hỏi Bảo Mật");
-        jpnlQuenMatKhau.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, -1, -1));
+        jpnlQuenMatKhau.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, -1, -1));
 
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setText("Trả Lời Câu Hỏi Bảo Mật");
-        jpnlQuenMatKhau.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        jpnlQuenMatKhau.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, -1));
 
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setText("Mật Khẩu Mới");
-        jpnlQuenMatKhau.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, -1));
+        jpnlQuenMatKhau.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, -1, -1));
 
-        jtxtTenDangNhap_QuenMatKhau.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtTenDangNhap_QuenMatKhau.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtTenDangNhap_QuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlQuenMatKhau.add(jtxtTenDangNhap_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 260, 40));
+        jtxtTenDangNhap_QuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jpnlQuenMatKhau.add(jtxtTenDangNhap_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 260, 40));
 
-        jtxtCauHoiBaoMat_QuenMatKhau.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtCauHoiBaoMat_QuenMatKhau.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtCauHoiBaoMat_QuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlQuenMatKhau.add(jtxtCauHoiBaoMat_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 260, 40));
+        jtxtCauHoiBaoMat_QuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jpnlQuenMatKhau.add(jtxtCauHoiBaoMat_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 260, 40));
 
-        jtxtTraLoiCauHoi_QuenMatKhau.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtTraLoiCauHoi_QuenMatKhau.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtTraLoiCauHoi_QuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlQuenMatKhau.add(jtxtTraLoiCauHoi_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 260, 40));
+        jtxtTraLoiCauHoi_QuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jpnlQuenMatKhau.add(jtxtTraLoiCauHoi_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 260, 40));
 
-        jtxtMatKhauMoi_FrmQuenMatKhau.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtMatKhauMoi_FrmQuenMatKhau.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtMatKhauMoi_FrmQuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlQuenMatKhau.add(jtxtMatKhauMoi_FrmQuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 260, 40));
+        jtxtMatKhauMoi_FrmQuenMatKhau.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jpnlQuenMatKhau.add(jtxtMatKhauMoi_FrmQuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, 260, 40));
 
         jbtnTimKiem_QuenMatKhau.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jbtnTimKiem_QuenMatKhau.setText("Tìm Kiếm...");
@@ -259,7 +259,7 @@ public class DangNhap extends javax.swing.JFrame {
                 jbtnTimKiem_QuenMatKhauActionPerformed(evt);
             }
         });
-        jpnlQuenMatKhau.add(jbtnTimKiem_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, 30));
+        jpnlQuenMatKhau.add(jbtnTimKiem_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 40, -1, 30));
 
         jbtnTroVeCuaQuenMatKhau.setBackground(new java.awt.Color(3, 58, 58));
         jbtnTroVeCuaQuenMatKhau.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -271,9 +271,9 @@ public class DangNhap extends javax.swing.JFrame {
                 jbtnTroVeCuaQuenMatKhauActionPerformed(evt);
             }
         });
-        jpnlQuenMatKhau.add(jbtnTroVeCuaQuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 50, 30));
+        jpnlQuenMatKhau.add(jbtnTroVeCuaQuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 30));
 
-        jbtnKichHoat_QuenMatKhau.setBackground(new java.awt.Color(68, 214, 156));
+        jbtnKichHoat_QuenMatKhau.setBackground(new java.awt.Color(97, 200, 13));
         jbtnKichHoat_QuenMatKhau.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jbtnKichHoat_QuenMatKhau.setText("Kích Hoạt");
         jbtnKichHoat_QuenMatKhau.addActionListener(new java.awt.event.ActionListener() {
@@ -281,29 +281,37 @@ public class DangNhap extends javax.swing.JFrame {
                 jbtnKichHoat_QuenMatKhauActionPerformed(evt);
             }
         });
-        jpnlQuenMatKhau.add(jbtnKichHoat_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 200, 50));
+        jpnlQuenMatKhau.add(jbtnKichHoat_QuenMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 450, 200, 50));
+
+        jLabel21.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        jLabel21.setText("Quên Mật Khẩu..");
+        jLabel21.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(97, 200, 13)));
+        jpnlQuenMatKhau.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 290, 50));
+
+        jLabel22.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        jLabel22.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(97, 200, 13)));
+        jpnlQuenMatKhau.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 60, 320));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon("C:\\Users\\Thinh Ly\\Desktop\\Pic_Icon_Java\\66fa983274830a826f6d88768dc403f4.jpg")); // NOI18N
+        jpnlQuenMatKhau.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 430, 530));
 
         jPanel3.add(jpnlQuenMatKhau, "card4");
 
-        jpnlManHinhDangKy.setBackground(new java.awt.Color(0, 0, 0));
+        jpnlManHinhDangKy.setBackground(new java.awt.Color(255, 255, 255));
         jpnlManHinhDangKy.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Tên Đăng Nhập");
-        jpnlManHinhDangKy.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
+        jpnlManHinhDangKy.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Tạo Mật Khẩu");
-        jpnlManHinhDangKy.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
+        jpnlManHinhDangKy.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 90, -1, -1));
 
-        jtxtTenDangNhap_FrmDangKy.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtTenDangNhap_FrmDangKy.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtTenDangNhap_FrmDangKy.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlManHinhDangKy.add(jtxtTenDangNhap_FrmDangKy, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 130, 30));
+        jtxtTenDangNhap_FrmDangKy.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 153, 153)));
+        jpnlManHinhDangKy.add(jtxtTenDangNhap_FrmDangKy, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 130, 30));
 
-        jbtnDangKy.setBackground(new java.awt.Color(68, 214, 156));
+        jbtnDangKy.setBackground(new java.awt.Color(97, 200, 13));
         jbtnDangKy.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jbtnDangKy.setText("Đăng Ký");
         jbtnDangKy.addActionListener(new java.awt.event.ActionListener() {
@@ -311,7 +319,7 @@ public class DangNhap extends javax.swing.JFrame {
                 jbtnDangKyActionPerformed(evt);
             }
         });
-        jpnlManHinhDangKy.add(jbtnDangKy, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 230, 50));
+        jpnlManHinhDangKy.add(jbtnDangKy, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 230, 50));
 
         jbtnTroVe.setBackground(new java.awt.Color(3, 58, 58));
         jbtnTroVe.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -326,29 +334,33 @@ public class DangNhap extends javax.swing.JFrame {
         jpnlManHinhDangKy.add(jbtnTroVe, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Câu Hỏi Bảo Mật");
-        jpnlManHinhDangKy.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
+        jpnlManHinhDangKy.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Trả Lời Câu Hỏi");
-        jpnlManHinhDangKy.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
+        jpnlManHinhDangKy.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, -1, -1));
 
-        jtxtCauHoiBaoMat.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtCauHoiBaoMat.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtCauHoiBaoMat.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlManHinhDangKy.add(jtxtCauHoiBaoMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 290, 30));
+        jtxtCauHoiBaoMat.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 153, 153)));
+        jpnlManHinhDangKy.add(jtxtCauHoiBaoMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 290, 30));
 
-        jtxtTraLoiCauHoi.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtTraLoiCauHoi.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtTraLoiCauHoi.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlManHinhDangKy.add(jtxtTraLoiCauHoi, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 290, 30));
+        jtxtTraLoiCauHoi.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 153, 153)));
+        jpnlManHinhDangKy.add(jtxtTraLoiCauHoi, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 290, 30));
 
-        jtxtTaoMatKhau_FrmDangKy.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtTaoMatKhau_FrmDangKy.setForeground(new java.awt.Color(255, 255, 255));
-        jtxtTaoMatKhau_FrmDangKy.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(153, 153, 153)));
-        jpnlManHinhDangKy.add(jtxtTaoMatKhau_FrmDangKy, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 130, 30));
+        jtxtTaoMatKhau_FrmDangKy.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(153, 153, 153)));
+        jpnlManHinhDangKy.add(jtxtTaoMatKhau_FrmDangKy, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 130, 130, 30));
+
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        jLabel19.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(97, 200, 13)));
+        jpnlManHinhDangKy.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 60, 320));
+
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        jLabel18.setText("Đăng Ký Tài Khoản..");
+        jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(97, 200, 13)));
+        jpnlManHinhDangKy.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 290, 50));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\Thinh Ly\\Desktop\\Pic_Icon_Java\\66fa983274830a826f6d88768dc403f4.jpg")); // NOI18N
+        jpnlManHinhDangKy.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 430, 530));
 
         jPanel3.add(jpnlManHinhDangKy, "card4");
 
@@ -357,57 +369,23 @@ public class DangNhap extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
-       
+
 
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
 //        String taikhoan = jtxtTaiKhoan.getText();
 //        String matkhau = new String(jtxtMatKhau.getPassword());
-         StringBuilder sb = new StringBuilder();
-//         if(taikhoan.equals(""))
-//         {
-//             sb.append("user is empty ");
-//             
-//         }
-//         if(matkhau.equals(""))
-//         {
-//             sb.append("password is empty ");
-//             
-//         }
-//         if(sb.length()> 0)
-//         {
-//             JOptionPane.showMessageDialog(this, sb.toString(), "Invalidation",
-//                     JOptionPane.ERROR_MESSAGE);
-//             return;
-//         }
-//         if(taikhoan.equals("fpt")&&matkhau.equals("polytechnic"))
-//         {
-//             JOptionPane.showMessageDialog(this, "Login Successfully");
-//             manHinhChinh temp_form = new manHinhChinh();
-//            temp_form.setVisible(true);
-//            this.setVisible(false);
-//         }
-//         if(jchkNhoMatKhau.isSelected())
-//         {
-//             JOptionPane.showMessageDialog(this, "Login information is remember");
-//         }else
-//         {
-//             JOptionPane.showMessageDialog(this, "invalid username of password ","failure"
-//             ,JOptionPane.ERROR_MESSAGE);
-//         }
-          if(jchkNhoMatKhau.isSelected())
-         {
-             JOptionPane.showMessageDialog(this, "Login information is remember");
-         }
-                 // StringBuilder nb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
+//        
+        if (jchkNhoMatKhau.isSelected()) {
+            JOptionPane.showMessageDialog(this, "Login information is remember");
+        }
+        // StringBuilder nb = new StringBuilder();
         if (jtxtTaiKhoan.equals("")) {
             sb.append("user is empty ");
-         
 
         }
         if (jtxtMatKhau.equals("")) {
             sb.append("password is empty ");
-       
 
         }
         if (sb.length() > 0) {
@@ -415,39 +393,29 @@ public class DangNhap extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-        
-       
+
         TaiKhoanDAO dao = new TaiKhoanDAO();
         try {
             TaiKhoanDTO taikhoan = dao.checkTaiKhoan(jtxtTaiKhoan.getText(), new String(jtxtMatKhau.getPassword()));
-            if(jtxtTaiKhoan.getText().isEmpty() || jtxtMatKhau.getText().isEmpty() )
-            {
-                JOptionPane.showMessageDialog(rootPane, "vui long nhap ten dang nhap va mat khau day du");
+            if (jtxtTaiKhoan.getText().isEmpty() || jtxtMatKhau.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(rootPane, "Vui lòng nhập tên đăng nhập và mật khẩu đầy đủ");
                 return;
             }
             if (taikhoan == null) {
-                JOptionPane.showMessageDialog(this, "ten dang nhap hoac mat khau sai");
+                JOptionPane.showMessageDialog(this, "Tên đăng nhập hoặc mật khẩu sai");
 
             } else {
-                         manHinhChinh temp_form = new manHinhChinh();
-                        temp_form.setVisible(true);
-                        this.setVisible(false);
-                         this.dispose();
+                manHinhChinh temp_form = new manHinhChinh();
+                temp_form.setVisible(true);
+                this.setVisible(false);
+                this.dispose();
             }
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "loi~~~");
+            JOptionPane.showMessageDialog(this, "Lỗi");
         }
-          
-//                 else
-//         {
-//             JOptionPane.showMessageDialog(this, "invalid username of password ","failure"
-//             ,JOptionPane.ERROR_MESSAGE);
-//         }
 
-//      manHinhChinh temp_form = new manHinhChinh();
-//        temp_form.setVisible(true);
-//        this.setVisible(false);
+
     }//GEN-LAST:event_btnDangNhapActionPerformed
 
     private void jtxtMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtMatKhauActionPerformed
@@ -466,95 +434,101 @@ public class DangNhap extends javax.swing.JFrame {
 
     private void jbtnDangKyTaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDangKyTaiKhoanActionPerformed
         // TODO add your handling code here:
-           jpnlManHinhDangKy.setVisible(true);
+        jpnlManHinhDangKy.setVisible(true);
         jpnlManHinhDangNhap.setVisible(false);
     }//GEN-LAST:event_jbtnDangKyTaiKhoanActionPerformed
 
+    private void XuatThongTinQuenMatKhau() {
+        jtxtTenDangNhap_QuenMatKhau.setText("");
+        jtxtCauHoiBaoMat_QuenMatKhau.setText("");
+        jtxtTraLoiCauHoi_QuenMatKhau.setText("");
+        jtxtMatKhauMoi_FrmQuenMatKhau.setText("");
+    }
+
+    private void XuatThongTinDangKy() {
+        jtxtTenDangNhap_FrmDangKy.setText("");
+        jtxtTaoMatKhau_FrmDangKy.setText("");
+        jtxtCauHoiBaoMat.setText("");
+        jtxtTraLoiCauHoi.setText("");
+    }
     private void jbtnDangKyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDangKyActionPerformed
-        
-         TaiKhoanDTO l = new TaiKhoanDTO();
+
+        TaiKhoanDTO l = new TaiKhoanDTO();
         l.setTenDangNhap(jtxtTenDangNhap_FrmDangKy.getText());
         l.setMatKhau(jtxtTaoMatKhau_FrmDangKy.getText());
         l.setCauHoiBaoMat(jtxtCauHoiBaoMat.getText());
         l.setTraLoiCauHoi(jtxtTraLoiCauHoi.getText());
-        if(jtxtTenDangNhap_FrmDangKy.getText().isEmpty()|| jtxtTaoMatKhau_FrmDangKy.getText().isEmpty() 
-                || jtxtCauHoiBaoMat.getText().isEmpty()|| jtxtTraLoiCauHoi.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(rootPane, "vui long nhap day du thong tin");
+        if (jtxtTenDangNhap_FrmDangKy.getText().isEmpty() || jtxtTaoMatKhau_FrmDangKy.getText().isEmpty()
+                || jtxtCauHoiBaoMat.getText().isEmpty() || jtxtTraLoiCauHoi.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "Vui lòng nhâp thông tin đầy đủ");
             return;
         }
         if (tkDAO.AddTaiKhoan(l)) {
-          
-            JOptionPane.showMessageDialog(rootPane, "Add Success!");
-           // list_TK.add(l); // them vao loai san pham
+
+            JOptionPane.showMessageDialog(rootPane, "Đã thêm thông tin thành công!");
+            // list_TK.add(l); // them vao loai san pham
         } else {
-            JOptionPane.showMessageDialog(rootPane, "Product's ID cannot be duplicated!");
+            JOptionPane.showMessageDialog(rootPane, "Lỗi không thể thêm thông tin!");
         }
-        //xuatThongTinLoaiSanPham();
+        XuatThongTinDangKy();
     }//GEN-LAST:event_jbtnDangKyActionPerformed
 
     private void jbtnTroVeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTroVeActionPerformed
         // TODO add your handling code here:
-            jpnlManHinhDangKy.setVisible(false);
+        jpnlManHinhDangKy.setVisible(false);
         jpnlManHinhDangNhap.setVisible(true);
     }//GEN-LAST:event_jbtnTroVeActionPerformed
 
     private void jbtnKichHoat_QuenMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnKichHoat_QuenMatKhauActionPerformed
-         String username = jtxtTenDangNhap_QuenMatKhau.getText();
+        String username = jtxtTenDangNhap_QuenMatKhau.getText();
         String newpassword = jtxtMatKhauMoi_FrmQuenMatKhau.getText();
         String CauHoiBaoMat = jtxtCauHoiBaoMat_QuenMatKhau.getText();
         String TraLoiCauHoi = jtxtTraLoiCauHoi_QuenMatKhau.getText();
-        
+
         try {
-            
+
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conn = DriverManager.getConnection
-            ("jdbc:sqlserver://localhost:1433;databasename=QLTBDT;"
-            + "username=sa;password=123456a@;encrypt=true;trustServerCertificate=true");
+            conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databasename=QLTBDT;"
+                    + "username=sa;password=123;encrypt=true;trustServerCertificate=true");
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select *from TaiKhoan where TenDangNhap ='"+username+ "'and TraLoiCauHoi ='"+TraLoiCauHoi+"'");
-            if(jtxtTenDangNhap_QuenMatKhau.getText().isEmpty()|| jtxtCauHoiBaoMat_QuenMatKhau.getText().isEmpty()
-                || jtxtTraLoiCauHoi_QuenMatKhau.getText().isEmpty()|| jtxtMatKhauMoi_FrmQuenMatKhau.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(rootPane, "vui long nhap day du thong tin");
-            return;
-        }
-            if(rs.next())
-            {
-                st.executeUpdate("update TaiKhoan set MatKhau= '"+newpassword+"'where TenDangNhap ='"+username+"'and TraLoiCauHoi='"+TraLoiCauHoi+"'");
-                       
-                JOptionPane.showMessageDialog(null, "your password is successfully updated");
-               
-                
-            }else
-            {
-                JOptionPane.showMessageDialog(null, "pls answer correct Username or Answer");
-               
+            ResultSet rs = st.executeQuery("select *from TaiKhoan where TenDangNhap ='" + username + "'and TraLoiCauHoi ='" + TraLoiCauHoi + "'");
+            if (jtxtTenDangNhap_QuenMatKhau.getText().isEmpty() || jtxtCauHoiBaoMat_QuenMatKhau.getText().isEmpty()
+                    || jtxtTraLoiCauHoi_QuenMatKhau.getText().isEmpty() || jtxtMatKhauMoi_FrmQuenMatKhau.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(rootPane, "vui long nhap day du thong tin");
+                return;
+            }
+            if (rs.next()) {
+                st.executeUpdate("update TaiKhoan set MatKhau= '" + newpassword + "'where TenDangNhap ='" + username + "'and TraLoiCauHoi='" + TraLoiCauHoi + "'");
+
+                JOptionPane.showMessageDialog(null, "Mật khẩu của bạn đã được đổi thành công");
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Xin vui lòng bạn trả lời thông tin chính xác");
+
             }
         } catch (Exception e) {
             //JOptionPane.showMessageDialog(null, "Loi khong the ket noi");
             e.printStackTrace();
         }
+
+        XuatThongTinQuenMatKhau();
     }//GEN-LAST:event_jbtnKichHoat_QuenMatKhauActionPerformed
 
     private void jbtnTimKiem_QuenMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTimKiem_QuenMatKhauActionPerformed
         String username = jtxtTenDangNhap_QuenMatKhau.getText();
-      
+
         try {
-            
+
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conn = DriverManager.getConnection
-            ("jdbc:sqlserver://localhost:1433;databasename=QLTBDT;"
-            + "username=sa;password=123456a@;encrypt=true;trustServerCertificate=true");
+            conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databasename=QLTBDT;"
+                    + "username=sa;password=123;encrypt=true;trustServerCertificate=true");
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select CauHoiBaoMat from TaiKhoan where TenDangNhap ='"+username+ "'");
-            if(rs.next())
-            {
+            ResultSet rs = st.executeQuery("select CauHoiBaoMat from TaiKhoan where TenDangNhap ='" + username + "'");
+            if (rs.next()) {
                 jtxtCauHoiBaoMat_QuenMatKhau.setText(rs.getString(1));
-                
-            }else
-            {
-                JOptionPane.showMessageDialog(null, "pls answer correct Username");
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Vui lòng bạn trả lời chính xác tên đăng nhập");
                 conn.close();
                 rs.close();
             }
@@ -565,17 +539,16 @@ public class DangNhap extends javax.swing.JFrame {
 
     private void jbtnTroVeCuaQuenMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTroVeCuaQuenMatKhauActionPerformed
         setVisible(false);
-         try{
+        try {
             UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
         new DangNhap().setVisible(true);
     }//GEN-LAST:event_jbtnTroVeCuaQuenMatKhauActionPerformed
 
     private void jbtnQuenMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnQuenMatKhauActionPerformed
-          jpnlManHinhDangKy.setVisible(false);
+        jpnlManHinhDangKy.setVisible(false);
         jpnlManHinhDangNhap.setVisible(false);
         jpnlQuenMatKhau.setVisible(true);
     }//GEN-LAST:event_jbtnQuenMatKhauActionPerformed
@@ -583,13 +556,13 @@ public class DangNhap extends javax.swing.JFrame {
     private void jtxtMatKhauFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxtMatKhauFocusGained
         // TODO add your handling code here:
         jtxtMatKhau.setText("");
-       
+
     }//GEN-LAST:event_jtxtMatKhauFocusGained
 
     private void jtxtTaiKhoanFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxtTaiKhoanFocusGained
         // TODO add your handling code here:
         jtxtTaiKhoan.setText("");
-       
+
     }//GEN-LAST:event_jtxtTaiKhoanFocusGained
 
     /**
@@ -606,7 +579,13 @@ public class DangNhap extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -638,6 +617,3 @@ public class DangNhap extends javax.swing.JFrame {
     private javax.swing.JTextField jtxtTraLoiCauHoi_QuenMatKhau;
     // End of variables declaration//GEN-END:variables
 }
-        
-
-        

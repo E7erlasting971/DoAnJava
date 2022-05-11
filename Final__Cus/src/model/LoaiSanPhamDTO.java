@@ -30,9 +30,7 @@ public class LoaiSanPhamDTO implements Serializable{
 
 
     
-    private String TenLoaiSanPham;
-    private String MaLoaiSanPham;
-    
-
-    
+    public String TenLoaiSanPham;
+    public String MaLoaiSanPham;
+  
 }

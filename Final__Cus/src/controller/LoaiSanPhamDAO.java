@@ -43,7 +43,7 @@ public class LoaiSanPhamDAO extends KetNoiCSDL{
                                 //LoaiSanPham bảng TenLoaiSanPham
         try (PreparedStatement ps = conn.prepareStatement(sql);)
         {
-            ps.setString(2, l.getMaLoaiSanPham());
+//            ps.setString(2, l.getMaLoaiSanPham());
             ps.setString(1, l.getTenLoaiSanPham());// gắn giá trị vào cot TenLoaiSP sql
             return ps.executeUpdate() > 0;// add thành công
         } 
@@ -52,7 +52,7 @@ public class LoaiSanPhamDAO extends KetNoiCSDL{
     public boolean addLoaiSanPham(LoaiSanPhamDTO s){
         
         String sql = "INSERT INTO LoaiSanPham(TenLoaiSanPham) "
-                + " VALUES(?);";
+                + " VALUES(?)";
         String sql1 ="Select MaLoaiSanPham from LoaiSanPham";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
