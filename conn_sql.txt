@@ -1,0 +1,377 @@
+CREATE DATABASE [QLTBDT]
+GO
+USE QLTBDT
+GO
+ALTER DATABASE [QLTBDT] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [QLTBDT] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [QLTBDT] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [QLTBDT] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [QLTBDT] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [QLTBDT] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [QLTBDT] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [QLTBDT] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [QLTBDT] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [QLTBDT] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [QLTBDT] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [QLTBDT] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [QLTBDT] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [QLTBDT] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [QLTBDT] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [QLTBDT] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [QLTBDT] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [QLTBDT] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [QLTBDT] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [QLTBDT] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [QLTBDT] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [QLTBDT] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [QLTBDT] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [QLTBDT] SET  MULTI_USER 
+GO
+ALTER DATABASE [QLTBDT] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [QLTBDT] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [QLTBDT] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [QLTBDT] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [QLTBDT] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [QLTBDT] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [QLTBDT] SET QUERY_STORE = OFF
+GO
+USE [QLTBDT]
+GO
+/****** Object:  Table [dbo].[CTHD]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CTHD](
+	[MaCTHD] [int] IDENTITY(1,1) NOT NULL,
+	[MaSP] [int] NOT NULL,
+	[TenSP] [nvarchar](50) NOT NULL,
+	[SoLuong] [int] NOT NULL,
+	[DonGia] [int] NOT NULL,
+	[MaHD] [int] NOT NULL,
+ CONSTRAINT [PK_CTHD] PRIMARY KEY CLUSTERED 
+(
+	[MaCTHD] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[HoaDon]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[HoaDon](
+	[MaHoaDon] [int] IDENTITY(1,1) NOT NULL,
+	[NgayMua] [date] NOT NULL,
+	[TongTien] [int] NOT NULL,
+	[MaKhachHang] [int] NOT NULL,
+	[MaNhanVien] [int] NOT NULL,
+ CONSTRAINT [PK_HoaDon_1] PRIMARY KEY CLUSTERED 
+(
+	[MaHoaDon] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[KhachHang]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[KhachHang](
+	[MaKhachHang] [int] IDENTITY(1,1) NOT NULL,
+	[TenKhachHang] [nvarchar](50) NULL,
+	[DiaChi] [nvarchar](50) NULL,
+	[SDT] [nchar](20) NULL,
+ CONSTRAINT [PK_KhachHang] PRIMARY KEY CLUSTERED 
+(
+	[MaKhachHang] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[LoaiSanPham]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[LoaiSanPham](
+	[MaLoaiSanPham] [int] IDENTITY(1,1) NOT NULL,
+	[TenLoaiSanPham] [nvarchar](50) NULL,
+ CONSTRAINT [PK_LoaiSanPham] PRIMARY KEY CLUSTERED 
+(
+	[MaLoaiSanPham] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[NhaCungCap]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[NhaCungCap](
+	[MaNhaCungCap] [int] IDENTITY(1,1) NOT NULL,
+	[TenNhaCungCap] [nvarchar](50) NULL,
+	[KhuVuc] [nvarchar](50) NULL,
+ CONSTRAINT [PK_NhaCungCap] PRIMARY KEY CLUSTERED 
+(
+	[MaNhaCungCap] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[NhanVien]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[NhanVien](
+	[MaNhanVien] [int] IDENTITY(1,1) NOT NULL,
+	[TenNhanVien] [nvarchar](50) NULL,
+	[DiaChi] [nvarchar](50) NULL,
+	[CCCD] [nchar](20) NULL,
+	[SDT] [nchar](20) NULL,
+	[ChucVu] [nvarchar](50) NULL,
+	[GioiTinh] [bit] NULL,
+ CONSTRAINT [PK_NhanVien] PRIMARY KEY CLUSTERED 
+(
+	[MaNhanVien] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[SanPham]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SanPham](
+	[MaSanPham] [int] IDENTITY(1,1) NOT NULL,
+	[TenSanPham] [nvarchar](50) NULL,
+	[GiaSanPham] [bigint] NULL,
+	[SLHienCo] [int] NULL,
+	[NgayNhap] [date] NULL,
+	[MaLoaiSanPham] [int] NULL,
+	[MaNhaCungCap] [int] NULL,
+ CONSTRAINT [PK_SanPham] PRIMARY KEY CLUSTERED 
+(
+	[MaSanPham] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 5/12/2022 9:51:32 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TaiKhoan](
+	[MaTaiKhoan] [int] IDENTITY(1,1) NOT NULL,
+	[TenDangNhap] [nchar](20) NULL,
+	[MatKhau] [nchar](20) NULL,
+	[CauHoiBaoMat] [nvarchar](50) NULL,
+	[TraLoiCauHoi] [nchar](50) NULL
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[CTHD] ON 
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (126, 17, N'laptop 17inch', 1, 2000, 84)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (127, 15, N'tv ASus', 1, 2000, 84)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (128, 16, N'màn hình MSI', 3, 1000, 85)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (129, 24, N'chuột không dây', 3, 1000, 85)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (130, 23, N'Ram 4GB', 1, 1000, 86)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (131, 15, N'tv ASus', 5, 2000, 86)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (132, 17, N'laptop 17inch', 1, 2000, 87)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (133, 17, N'laptop 17inch', 1, 2000, 88)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (134, 16, N'màn hình MSI', 1, 1000, 92)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (135, 24, N'chuột không dây', 2, 1000, 93)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (136, 15, N'tv ASus', 1, 2000, 94)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (137, 15, N'tv ASus', 1, 2000, 95)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (138, 15, N'tv ASus', 1, 2000, 96)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (139, 23, N'Ram 4GB', 2, 1000, 97)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (140, 15, N'tv ASus', 1, 2000, 98)
+GO
+INSERT [dbo].[CTHD] ([MaCTHD], [MaSP], [TenSP], [SoLuong], [DonGia], [MaHD]) VALUES (141, 23, N'Ram 4GB', 1, 1000, 99)
+GO
+SET IDENTITY_INSERT [dbo].[CTHD] OFF
+GO
+SET IDENTITY_INSERT [dbo].[HoaDon] ON 
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (84, CAST(N'2022-05-12' AS Date), 4000, 20, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (85, CAST(N'2022-05-12' AS Date), 6000, 18, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (86, CAST(N'2022-05-12' AS Date), 11000, 19, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (87, CAST(N'2022-05-05' AS Date), 2000, 24, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (88, CAST(N'2022-05-01' AS Date), 2000, 24, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (89, CAST(N'2022-05-16' AS Date), 2000, 21, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (90, CAST(N'2022-05-03' AS Date), 2000, 21, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (91, CAST(N'2022-05-02' AS Date), 2000, 21, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (92, CAST(N'2022-05-08' AS Date), 1000, 21, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (93, CAST(N'2022-02-12' AS Date), 2000, 20, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (94, CAST(N'2022-03-12' AS Date), 2000, 20, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (95, CAST(N'2022-04-12' AS Date), 2000, 20, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (96, CAST(N'2022-06-12' AS Date), 2000, 20, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (97, CAST(N'2022-08-12' AS Date), 2000, 20, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (98, CAST(N'2022-09-12' AS Date), 2000, 19, 1)
+GO
+INSERT [dbo].[HoaDon] ([MaHoaDon], [NgayMua], [TongTien], [MaKhachHang], [MaNhanVien]) VALUES (99, CAST(N'2022-10-12' AS Date), 1000, 18, 1)
+GO
+SET IDENTITY_INSERT [dbo].[HoaDon] OFF
+GO
+SET IDENTITY_INSERT [dbo].[KhachHang] ON 
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (18, N'Thành', N'TpHCM', N'0145658958          ')
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (19, N'Bách', N'Buôn Ma Thuột', N'0165877569          ')
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (20, N'Thịnh', N'Đồng Nai', N'0914588658          ')
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (21, N'Nguyễn Văn A', N'Hà Nội', N'0147245687          ')
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (22, N'Nguyễn Thị Xuân', N'Hải Phòng', N'0147365856          ')
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (23, N'Võ Văn Khải', N'Vũng Tàu', N'0924588457          ')
+GO
+INSERT [dbo].[KhachHang] ([MaKhachHang], [TenKhachHang], [DiaChi], [SDT]) VALUES (24, N'Lâm Minh Khang', N'Đà Nẵng', N'0125486942          ')
+GO
+SET IDENTITY_INSERT [dbo].[KhachHang] OFF
+GO
+SET IDENTITY_INSERT [dbo].[LoaiSanPham] ON 
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (1, N'Bàn Phím')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (4, N'Chuột')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (5, N'Màn Hình')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (6, N'PC')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (7, N'Tai Nghe')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (8, N'Laptop')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (9, N'Ram')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (10, N'Card màn hình')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (11, N'CPU')
+GO
+INSERT [dbo].[LoaiSanPham] ([MaLoaiSanPham], [TenLoaiSanPham]) VALUES (12, N'Tản nhiệt')
+GO
+SET IDENTITY_INSERT [dbo].[LoaiSanPham] OFF
+GO
+SET IDENTITY_INSERT [dbo].[NhaCungCap] ON 
+GO
+INSERT [dbo].[NhaCungCap] ([MaNhaCungCap], [TenNhaCungCap], [KhuVuc]) VALUES (1, N'ASUS', N'TpHCM')
+GO
+INSERT [dbo].[NhaCungCap] ([MaNhaCungCap], [TenNhaCungCap], [KhuVuc]) VALUES (2, N'DELL', N'Hà Nội')
+GO
+INSERT [dbo].[NhaCungCap] ([MaNhaCungCap], [TenNhaCungCap], [KhuVuc]) VALUES (8, N'Nitro', N'Hải Phòng')
+GO
+INSERT [dbo].[NhaCungCap] ([MaNhaCungCap], [TenNhaCungCap], [KhuVuc]) VALUES (9, N'ACER', N'Buôn Ma Thuột')
+GO
+INSERT [dbo].[NhaCungCap] ([MaNhaCungCap], [TenNhaCungCap], [KhuVuc]) VALUES (10, N'LENOVO', N'TpHCM')
+GO
+INSERT [dbo].[NhaCungCap] ([MaNhaCungCap], [TenNhaCungCap], [KhuVuc]) VALUES (11, N'MSI', N'Đồng Nai')
+GO
+SET IDENTITY_INSERT [dbo].[NhaCungCap] OFF
+GO
+SET IDENTITY_INSERT [dbo].[NhanVien] ON 
+GO
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [DiaChi], [CCCD], [SDT], [ChucVu], [GioiTinh]) VALUES (1, N'Bo', N'tphcm', N'053165465           ', N'0124556859          ', N'Thu ngân', 0)
+GO
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [DiaChi], [CCCD], [SDT], [ChucVu], [GioiTinh]) VALUES (4, N'Thịnh', N'Tp.HCM', N'032135155           ', N'0126678248          ', N'Nhân Viên', 1)
+GO
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [DiaChi], [CCCD], [SDT], [ChucVu], [GioiTinh]) VALUES (5, N'Thành', N'Tp.HCM12', N'165453456           ', N'0164556969          ', N'Kiểm Duyệt', 0)
+GO
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [DiaChi], [CCCD], [SDT], [ChucVu], [GioiTinh]) VALUES (10, N'Bách', N'Buôn Ma Thuột', N'546856589           ', N'0925486952          ', N'Quản Lý', 1)
+GO
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [DiaChi], [CCCD], [SDT], [ChucVu], [GioiTinh]) VALUES (13, N'Nguyễn Văn A', N'Hà Nội', N'032031351           ', N'0123456789          ', N'Nhân Viên', 1)
+GO
+SET IDENTITY_INSERT [dbo].[NhanVien] OFF
+GO
+SET IDENTITY_INSERT [dbo].[SanPham] ON 
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (15, N'tv ASus', 2000, 36, CAST(N'2022-10-03' AS Date), 4, 4)
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (16, N'màn hình MSI', 1000, 26, CAST(N'2021-12-25' AS Date), 4, 4)
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (17, N'laptop 17inch', 2000, 22, CAST(N'2022-12-05' AS Date), 1, 1)
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (18, N'pc HomeWork', 4000, 16, CAST(N'2022-09-07' AS Date), 1, 1)
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (23, N'Ram 4GB', 1000, 11, CAST(N'2022-11-24' AS Date), 1, 2)
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (24, N'chuột không dây', 1000, 15, CAST(N'2022-08-09' AS Date), 5, 2)
+GO
+INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [GiaSanPham], [SLHienCo], [NgayNhap], [MaLoaiSanPham], [MaNhaCungCap]) VALUES (25, N'tai nghe gaming', 2500, 16, CAST(N'2022-05-26' AS Date), 2, 1)
+GO
+SET IDENTITY_INSERT [dbo].[SanPham] OFF
+GO
+SET IDENTITY_INSERT [dbo].[TaiKhoan] ON 
+GO
+INSERT [dbo].[TaiKhoan] ([MaTaiKhoan], [TenDangNhap], [MatKhau], [CauHoiBaoMat], [TraLoiCauHoi]) VALUES (6, N'a                   ', N'a                   ', N'a', N'a                                                 ')
+GO
+INSERT [dbo].[TaiKhoan] ([MaTaiKhoan], [TenDangNhap], [MatKhau], [CauHoiBaoMat], [TraLoiCauHoi]) VALUES (5, N'thinh               ', N'123                 ', N'ngay nao moi nang', N'hom sau                                           ')
+GO
+INSERT [dbo].[TaiKhoan] ([MaTaiKhoan], [TenDangNhap], [MatKhau], [CauHoiBaoMat], [TraLoiCauHoi]) VALUES (9, N'bach                ', N'123                 ', N'khi nao troi nang', N'thu bay                                           ')
+GO
+INSERT [dbo].[TaiKhoan] ([MaTaiKhoan], [TenDangNhap], [MatKhau], [CauHoiBaoMat], [TraLoiCauHoi]) VALUES (10, N'thanh               ', N'123                 ', N'khi nao troi mua', N'thu hai                                           ')
+GO
+SET IDENTITY_INSERT [dbo].[TaiKhoan] OFF
+GO
+USE [master]
+GO
+ALTER DATABASE [QLTBDT] SET  READ_WRITE 
+GO

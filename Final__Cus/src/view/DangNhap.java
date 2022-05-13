@@ -60,7 +60,6 @@ public class DangNhap extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jtxtTaiKhoan = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jchkNhoMatKhau = new javax.swing.JCheckBox();
         jButton3 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -193,12 +192,6 @@ public class DangNhap extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Ravie", 1, 20)); // NOI18N
         jLabel6.setText("welcome to wibu");
         jpnlManHinhDangNhap.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 280, 70));
-
-        jchkNhoMatKhau.setBackground(new java.awt.Color(245, 245, 245));
-        jchkNhoMatKhau.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jchkNhoMatKhau.setForeground(new java.awt.Color(21, 148, 193));
-        jchkNhoMatKhau.setText("Nhớ mật khẩu");
-        jpnlManHinhDangNhap.add(jchkNhoMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, -1, 20));
 
         jButton3.setBackground(new java.awt.Color(245, 245, 245));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -375,10 +368,7 @@ public class DangNhap extends javax.swing.JFrame {
 //        String taikhoan = jtxtTaiKhoan.getText();
 //        String matkhau = new String(jtxtMatKhau.getPassword());
         StringBuilder sb = new StringBuilder();
-//        
-        if (jchkNhoMatKhau.isSelected()) {
-            JOptionPane.showMessageDialog(this, "Login information is remember");
-        }
+
         // StringBuilder nb = new StringBuilder();
         if (jtxtTaiKhoan.equals("")) {
             sb.append("user is empty ");
@@ -429,7 +419,6 @@ public class DangNhap extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jtxtTaiKhoan.setText("");
         jtxtMatKhau.setText("");
-        jchkNhoMatKhau.setSelected(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jbtnDangKyTaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDangKyTaiKhoanActionPerformed
@@ -601,7 +590,6 @@ public class DangNhap extends javax.swing.JFrame {
     private javax.swing.JButton jbtnTimKiem_QuenMatKhau;
     private javax.swing.JButton jbtnTroVe;
     private javax.swing.JButton jbtnTroVeCuaQuenMatKhau;
-    private javax.swing.JCheckBox jchkNhoMatKhau;
     private javax.swing.JPanel jpnlManHinhDangKy;
     private javax.swing.JPanel jpnlManHinhDangNhap;
     private javax.swing.JPanel jpnlQuenMatKhau;

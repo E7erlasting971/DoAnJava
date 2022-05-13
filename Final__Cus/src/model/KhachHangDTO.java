@@ -15,7 +15,7 @@ public class KhachHangDTO extends ConNguoiDTO{
     private String MaKhachHang ;
 //    private String TenKhachHang;
     private String DiaChi ;
-    private String SDT ;
+    private String SDT;
     
     public String getMaKhachHang() {
         return MaKhachHang;
